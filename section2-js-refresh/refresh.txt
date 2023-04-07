@@ -1,0 +1,16 @@
+SOME IMPORTANT CONCEPTS
+
+1 - Destructuring
+2 - Rest operators
+3 - Spread operators
+
+SOME IMPORTANT ARRAY CONCEPTS
+
+1 - map 
+2 - find
+3 - findIndex
+4 - filter
+5 - reduce
+6 - concat
+7 - slice
+8 - splice
