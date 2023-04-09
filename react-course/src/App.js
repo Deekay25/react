@@ -1,5 +1,5 @@
-import ExpenseItems from './components/ExpenseItems'
-
+// import ExpenseItems from "./components/ExpenseItems";
+import Expenses from './components/Expenses'
 function App() {
   const expenses = [
     {
@@ -27,9 +27,7 @@ function App() {
       <h2>Let's get started!</h2>
       {/* expenseitems here is called components */}
       {/* the attributes are called props */}
-      <ExpenseItems t= {expenses[0].title} a={expenses[0].amount} d={expenses[0].date} />
-      <ExpenseItems t= {expenses[1].title} a={expenses[1].amount} d={expenses[1].date} />
-      <ExpenseItems t= {expenses[2].title} a={expenses[2].amount} d={expenses[2].date} />
+      <Expenses items={expenses}/>
     </div>
   );
 }
