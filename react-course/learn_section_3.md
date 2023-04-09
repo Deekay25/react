@@ -13,3 +13,10 @@
 # vid no.36 Props
 ### as it is in html tags has attributes 
 ### while in react jsx  has 'props' 
+
+# vid no.39 composition
+### composition is combining react components
+### creating a component that will just serve as a shell like cards
+### it is used to build custom components
+### <div>{props.children}</div> -> this is a customs props for building compositions
+### .children are all the items within or under those props in the custom component (in this case card)

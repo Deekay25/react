@@ -1,5 +1,6 @@
 import ExpenseDate from './ExpenseDate';
 import "./ExpenseItems.css";
+import Card from './Card'
 // you name the function as the file name by convetion
 function ExpenseItems(props) {
     // turned into a new component called expense date
@@ -7,13 +8,13 @@ function ExpenseItems(props) {
     // const day = props.d.toLocaleString('en-US', { day: '2-digit' })
     // const year = props.d.getFullYear();
     return (
-      <div className="expense-item">
+      <Card className="expense-item">
         <ExpenseDate d={props.d} />
         <div className="expense-item__description">
           <h2>{props.t}</h2>
           <div className="expense-item__price">${props.a}</div>
         </div>
-      </div>
+      </Card>
     );
 }
 
