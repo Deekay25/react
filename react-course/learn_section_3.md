@@ -1,8 +1,8 @@
-# Vid no.32
+## Vid no.32
 ### a component in react is just a javascript function (combination of html and js with some CSS)
 ### components are named with capital letters at the start as in (ExpressItem)
 
-# vid no.34
+## vid no.34
 ### Note that though the syntax looks html like
 ### but you are not writing html you are writing jsx
 ### this is why in your tags you write className instead of class 
@@ -10,13 +10,18 @@
 ### finally note the browser converts that jsx to javascript 
 ### you can confirm that if you check your browser under sources
 
-# vid no.36 Props
+## vid no.36 Props
 ### as it is in html tags has attributes 
 ### while in react jsx  has 'props' 
 
-# vid no.39 composition
+## vid no.39 composition
 ### composition is combining react components
 ### creating a component that will just serve as a shell like cards
 ### it is used to build custom components
 ### <div>{props.children}</div> -> this is a customs props for building compositions
 ### .children are all the items within or under those props in the custom component (in this case card)
+
+
+## vid no.41 Jsx under the hood
+### import React from 'react' // on older react project anywhere you will use jsx you have to import react on all files
+### 

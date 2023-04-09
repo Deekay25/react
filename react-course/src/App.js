@@ -1,5 +1,6 @@
 // import ExpenseItems from "./components/ExpenseItems";
-import Expenses from "./components/Expenses";
+import React from "react"; // on older react project anywhere you will use jsx you have to import react on all files
+import Expenses from "./components/Expenses/Expenses";
 function App() {
   const expenses = [
     {
@@ -8,11 +9,12 @@ function App() {
       amount: 94.12,
       date: new Date(2020, 7, 14),
     },
-    { 
-      id: "e2", 
-      title: "New TV", 
-      amount: 799.49, 
-      date: new Date(2021, 2, 12) },
+    {
+      id: "e2",
+      title: "New TV",
+      amount: 799.49,
+      date: new Date(2021, 2, 12),
+    },
     {
       id: "e3",
       title: "Car Insurance",
@@ -26,13 +28,25 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+  //##########################################
+  // using the older react syntax without JSX
+  // JSX transforms to below code then to JS
+  //under the hood
+  //##########################################
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement("h2", {}, "Let's get started!"),
+  //   React.createElement(Expenses, {items: expenses})
+  // );
+  //##########################################
   return (
-    <div>
-      <h2>Let's get started!</h2>
-      {/* expenseitems here is called components */}
-      {/* the attributes are called props */}
-      <Expenses items={expenses} />
-    </div>
+  <div>
+    <h2>Let's get started!</h2>
+    {/* expenseitems here is called components */}
+    {/* the attributes are called props */}
+    <Expenses items={expenses} />
+  </div>
   );
 }
 
