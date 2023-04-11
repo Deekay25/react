@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItems.css";
 import Card from "../UI/Card";
 // you name the function as the file name by convetion
 function ExpenseItems(props) {
-  // by convention when your functions ends with handler it meaans 
-  // the function executes when an event is triggered 
+  //useState is a react hook
+  //it must be used inside of a function component not nested function
+  // use State returns an array, 1st value is the variable itself
+  // 2nd value is the updating function
+  // title points at props.title current state value
+  // function setTitle updates title (they are been desstructured).
+  const [title, setTitle] = useState(props.t);
+  // by convention when your functions ends with handler it meaans
+  // the function executes when an event is triggered
   const clickHandler = () => {
-    console.log('clicked!!!')
+    setTitle("updated!");
+    // below works but this is not how react pass events
+    // it only makes the event triggered once and that's it
+    // const title = 'Updated'
+    console.log(title);
   };
   // turned into a new component called expense date
   // const month = props.d.toLocaleString('en-US', { month: 'long' })
@@ -17,7 +28,10 @@ function ExpenseItems(props) {
     <Card className="expense-item">
       <ExpenseDate d={props.d} />
       <div className="expense-item__description">
-        <h2>{props.t}</h2>
+        {/* the title here comes from the desstructured useState array */}
+        {/* this is because title now points at props.t */}
+        <h2>{title}</h2>
+        {/* <h2>{props.t}</h2> */}
         <div className="expense-item__price">${props.a}</div>
       </div>
       {/* when a function is with () it means it will be executed as soon as the page loads */}

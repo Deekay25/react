@@ -1,6 +1,7 @@
 // import ExpenseItems from "./components/ExpenseItems";
 import React from "react"; // on older react project anywhere you will use jsx you have to import react on all files
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from './components/NewExpense/NewExpense' 
 function App() {
   const expenses = [
     {
@@ -42,7 +43,8 @@ function App() {
   //##########################################
   return (
   <div>
-    <h2>Let's get started!</h2>
+    {/* <h2>Let's get started!</h2> */}
+    <NewExpense />
     {/* expenseitems here is called components */}
     {/* the attributes are called props */}
     <Expenses items={expenses} />
