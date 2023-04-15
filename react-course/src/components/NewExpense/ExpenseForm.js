@@ -4,17 +4,17 @@ import "./ExpenseForm.css";
 function ExpenseForm() {
 // multi State approach
 // using multiple useState like below is more conventional
-//    const [enteredTitle,setEnteredTitle] = React.useState('')
-//    const [enteredAmount,setEnteredAmount] = React.useState('')
-//    const [enteredDate,setEnteredDate] = React.useState('')
+   const [enteredTitle,setEnteredTitle] = React.useState('')
+   const [enteredAmount,setEnteredAmount] = React.useState('')
+   const [enteredDate,setEnteredDate] = React.useState('')
 //######################################
 //  another way to use multiple useState by using just one useState object
 //#####################################
-  const [userInput, setUserInput] = React.useState({
-    enteredTitle: '',
-    enteredAmount: '',
-    ennteredDate: '' 
-  });
+  // const [userInput, setUserInput] = React.useState({
+  //   enteredTitle: '',
+  //   enteredAmount: '',
+  //   ennteredDate: '' 
+  // });
   // (event) here comes with the function
   const titleChangeHandler = (event) => {
     // console.log("worked!!");
@@ -23,7 +23,7 @@ function ExpenseForm() {
     // you can open console as you type then open the Object
     // you will see target then value to capture the values
     // console.log(event.target.value);
-    // setEnteredTitle(event.target.value);
+    setEnteredTitle(event.target.value);
     // #########################################
     // using the new way
     // if leave it with just entered title it means the other two
@@ -36,27 +36,28 @@ function ExpenseForm() {
     // #########################################
     // a better version of the new way (though they always works the same)
     // always remember if your state object depends on the previous state always use this
+    // it helps you operate on the latest state snapshot
     // setUserInput((prevState) => {
     //     return  {...prevState, enteredTitle: event.target.value};
     // })
   };
   const amountChangeHandler = (event) => {
     // console.log(event.target.value);
-    // setEnteredAmount(event.target.value);
+    setEnteredAmount(event.target.value);
     // #####################################
-    setUserInput({
-      ...userInput,
-      enteredAmount: event.target.value,
-    });
+    // setUserInput({
+    //   ...userInput,
+    //   enteredAmount: event.target.value,
+    // });
   };
   const dateChangeHandler = (event) => {
     // console.log(event.target.value);
-    // setEnteredDate(event.target.value);
+    setEnteredDate(event.target.value);
     // #####################################
-    setUserInput({
-      ...userInput,
-      enteredDate: event.target.value,
-    });
+    // setUserInput({
+    //   ...userInput,
+    //   enteredDate: event.target.value,
+    // });
   };
   return (
     <form>
