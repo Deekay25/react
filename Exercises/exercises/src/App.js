@@ -1,11 +1,28 @@
+// #############################
+// Exercise No.7
+// ############################
+// import React from "react";
+// import AppExercise from './components/AppExercise'
+// function App() {
+//   return (
+//     <div>
+//       <AppExercise />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
 import React from "react";
-import AppExercise from './components/AppExercise'
-function App() {
+
+import Counter from './components/Counter'
+// don't change the Component name "App"
+export default function App() {
   return (
     <div>
-      <AppExercise />
+      <p id="counter"></p>
+      <Counter />
     </div>
   );
 }
-
-export default App;
