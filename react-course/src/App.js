@@ -41,10 +41,14 @@ function App() {
   //   React.createElement(Expenses, {items: expenses})
   // );
   //##########################################
+  const addExpenseHandler = expense =>{
+    console.log('in app.js')
+    console.log(expense)
+  }
   return (
   <div>
     {/* <h2>Let's get started!</h2> */}
-    <NewExpense />
+    <NewExpense onAddExpense={addExpenseHandler}/>
     {/* expenseitems here is called components */}
     {/* the attributes are called props */}
     <Expenses items={expenses} />

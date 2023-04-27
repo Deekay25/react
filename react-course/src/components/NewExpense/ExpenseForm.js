@@ -1,7 +1,7 @@
 import React from "react";
 import "./ExpenseForm.css";
 
-function ExpenseForm() {
+function ExpenseForm(props) {
 // multi State approach
 // using multiple useState like below is more conventional
    const [enteredTitle,setEnteredTitle] = React.useState('')
@@ -59,14 +59,39 @@ function ExpenseForm() {
     //   enteredDate: event.target.value,
     // });
   };
+  const submitHandler = (event) => {
+    //event is a default object the browser gives us
+    //this will prevent the natural behavior of forms 
+    //always when submitted it reloads the page
+    event.preventDefault();
+
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate)
+
+    }
+  //  if i ever got confused with below props rewatch vid No. 58
+    props.onSaveExpenseData(expenseData)
+    // console.log(expenseData)
+    //below clear the forms inputs
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
+  }
   return (
-    <form>
+    //we add an onSubmit prop to the form itself
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
           {/* instead of using onChange i can use on onInput */}
           {/* difference is on input only works on input while on change works on all elements */}
-          <input type="text" onChange={titleChangeHandler} />
+          <input
+            type="text"
+            value={enteredTitle} //having both value and onChange is called two way binding
+            onChange={titleChangeHandler}
+          />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
@@ -74,6 +99,7 @@ function ExpenseForm() {
             type="number"
             min="0.01"
             step="0.01"
+            value={enteredAmount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -83,6 +109,7 @@ function ExpenseForm() {
             type="date"
             min="2019-01-01"
             max="2023-04-30"
+            value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>

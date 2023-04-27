@@ -6,7 +6,7 @@ function ExpenseDate(props) {
   const day = props.d.toLocaleString("en-US", { day: "2-digit" });
   const year = props.d.getFullYear();
   return (
-    <div class="expense-date">
+    <div className="expense-date">
       <div className="expense-date__month">{month}</div>
       <div className="expsense-date__day">{day}</div>
       <div className="expsense-date__year">{year}</div>

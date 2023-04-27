@@ -14,7 +14,7 @@ function ExpenseItems(props) {
   // by convention when your functions ends with handler it meaans
   // the function executes when an event is triggered
   const clickHandler = () => {
-    setTitle("updated!");
+    setTitle("updated!")
     // below works but this is not how react pass events
     // it only makes the event triggered once and that's it
     // const title = 'Updated'
