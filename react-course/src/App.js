@@ -46,13 +46,13 @@ function App() {
     console.log(expense)
   }
   return (
-  <div>
-    {/* <h2>Let's get started!</h2> */}
-    <NewExpense onAddExpense={addExpenseHandler}/>
-    {/* expenseitems here is called components */}
-    {/* the attributes are called props */}
-    <Expenses items={expenses} />
-  </div>
+    <div>
+      {/* <h2>Let's get started!</h2> */}
+      <NewExpense onAddExpense={addExpenseHandler} />
+      {/* expenseitems here is called components */}
+      {/* the attributes are called props */}
+      <Expenses items={expenses} />
+    </div>
   );
 }
 
