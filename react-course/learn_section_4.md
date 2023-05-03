@@ -13,3 +13,7 @@
 ### or pass it down to some other child component
 ### for example, a component that generates data and also needs data such as app.js
 ### from the expenses app we are building
+
+## No. 60 controlled vs uncontrlled, stateful vs stateless comps
+### whenever you use a two way binding you are creating a controlled component
+### 
