@@ -14,32 +14,36 @@ function ExpenseItems(props) {
   // by convention when your functions ends with handler it meaans
   // the function executes when an event is triggered
   // const clickHandler = () => {
-    // setTitle("updated!")
-    // #################################
-    // below works but this is not how react pass events
-    // it only makes the event triggered once and that's it
-    // const title = 'Updated'
-    // console.log(title);
+  // setTitle("updated!")
+  // #################################
+  // below works but this is not how react pass events
+  // it only makes the event triggered once and that's it
+  // const title = 'Updated'
+  // console.log(title);
   // };
   // turned into a new component called expense date
   // const month = props.d.toLocaleString('en-US', { month: 'long' })
   // const day = props.d.toLocaleString('en-US', { day: '2-digit' })
   // const year = props.d.getFullYear();
   return (
-    <Card className="expense-item">
-      <ExpenseDate d={props.d} />
-      <div className="expense-item__description">
-        {/* the title here comes from the desstructured useState array */}
-        {/* this is because title now points at props.t */}
-        {/* <h2>{title}</h2> */}
-        <h2>{props.t}</h2>
-        <div className="expense-item__price">${props.a}</div>
-      </div>
-      {/* when a function is with () it means it will be executed as soon as the page loads */}
-      {/* but when it is without () as seen below it means it won't be executed until called upon */}
-      {/* so basically we point at the function clickHandler but not execute it */}
-      {/* <button onClick={clickHandler}>Change Title</button> */}
-    </Card>
+    // since i'm using <ul> in ExpensesList I wrap my Expenses items with li for 
+    // just semantic purposes 
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate d={props.d} />
+        <div className="expense-item__description">
+          {/* the title here comes from the desstructured useState array */}
+          {/* this is because title now points at props.t */}
+          {/* <h2>{title}</h2> */}
+          <h2>{props.t}</h2>
+          <div className="expense-item__price">${props.a}</div>
+        </div>
+        {/* when a function is with () it means it will be executed as soon as the page loads */}
+        {/* but when it is without () as seen below it means it won't be executed until called upon */}
+        {/* so basically we point at the function clickHandler but not execute it */}
+        {/* <button onClick={clickHandler}>Change Title</button> */}
+      </Card>
+    </li>
   );
 }
 

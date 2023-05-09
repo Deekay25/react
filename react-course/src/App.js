@@ -1,7 +1,7 @@
 // import ExpenseItems from "./components/ExpenseItems";
-import React, {useState} from "react"; // on older react project anywhere you will use jsx you have to import react on all files
+import React, { useState } from "react"; // on older react project anywhere you will use jsx you have to import react on all files
 import Expenses from "./components/Expenses/Expenses";
-import NewExpense from './components/NewExpense/NewExpense' 
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const DUMMY_EXPENSES = [
   {
@@ -31,7 +31,6 @@ const DUMMY_EXPENSES = [
 ];
 
 function App() {
-  
   //##########################################
   // using the older react syntax without JSX
   // JSX transforms to below code then to JS
@@ -44,9 +43,9 @@ function App() {
   //   React.createElement(Expenses, {items: expenses})
   // );
   //##########################################
-  const [expense,setExpenses] = useState(DUMMY_EXPENSES);
+  const [expense, setExpenses] = useState(DUMMY_EXPENSES);
 
-  const addExpenseHandler = expense =>{
+  const addExpenseHandler = (expense) => {
     // below will work but it is not the cleanest way to do it in React
     // because our data depends on the previus snapshot
     // setExpenses([expense, ...expenses])
@@ -56,11 +55,9 @@ function App() {
     // ...expenses we pull out the existing items snapshot and include in the array
     //when you update your object depending on the previous state always use below
     // prevExpense is from react
-    setExpenses(
-      prevExpenses => {
-        return  [expense, ...prevExpenses]
-      }
-    );
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
     // console.log('in app.js')
     // console.log(expense)
   };
