@@ -13,7 +13,7 @@ function ExpenseForm(props) {
   // const [userInput, setUserInput] = React.useState({
   //   enteredTitle: '',
   //   enteredAmount: '',
-  //   ennteredDate: '' 
+  //   ennteredDate: ''
   // });
   // (event) here comes with the function
   const titleChangeHandler = (event) => {
@@ -61,7 +61,7 @@ function ExpenseForm(props) {
   };
   const submitHandler = (event) => {
     //event is a default object the browser gives us
-    //this will prevent the natural behavior of forms 
+    //this will prevent the natural behavior of forms
     //always when submitted it reloads the page
     event.preventDefault();
 
@@ -115,6 +115,7 @@ function ExpenseForm(props) {
         </div>
       </div>
       <div className="expense-form__actions">
+        <button type='button' onClick={props.onCancel}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
