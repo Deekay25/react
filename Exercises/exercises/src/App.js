@@ -51,15 +51,30 @@
 // Exercise No.10 conditional content
 // ##################################
 
-import React from "react";
-import CondCon from "./components/ConditionalContent_Ex10";
+// import React from "react";
+// import CondCon from "./components/ConditionalContent_Ex10";
 
-function App() {
+// function App() {
+//   return (
+//     <div>
+//       <CondCon />
+//     </div>
+//   );
+// }
+
+
+// ##################################
+// Exercise No.11 dynamic styling 
+// ##################################
+
+import React from 'react';
+
+import DynamicStyles from './components/DynamicStyles_Ex11';
+
+function App(){
   return (
-    <div>
-      <CondCon />
-    </div>
-  );
+    <DynamicStyles />
+  ); 
 }
 
 export default App;
