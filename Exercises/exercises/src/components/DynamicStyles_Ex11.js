@@ -12,9 +12,20 @@ export default function DynamicStyles() {
     //  (!isHighlighted sets true to false and vice versa).
     setToggle(isToggled => !isToggled);
   };
+  
+//   ###########################
+//   using inline style
+//   ###########################
+//   return (
+//     <div>
+//       <p style={{ color: toggle ? "red" : "white" }}>Style me!</p>
+//       <button onClick={clickHandler}>Toggle style</button>
+//     </div>
+//   );
+
   return (
     <div>
-      <p style={{ color: toggle ? "red" : "white" }}>Style me!</p>
+      <p className={`${toggle ? 'toggle': ''}`}>Style me!</p>
       <button onClick={clickHandler}>Toggle style</button>
     </div>
   );
