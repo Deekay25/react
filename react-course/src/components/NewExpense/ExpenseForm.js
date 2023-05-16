@@ -67,10 +67,12 @@ function ExpenseForm(props) {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
-      date: new Date(enteredDate)
-
-    }
+      // amount: enteredAmount,
+      // why plus was added is because when we have multiples values they are returned as strings
+      //https://stackoverflow.com/a/17106701 link to assist incase of confusion
+      amount: +enteredAmount,
+      date: new Date(enteredDate),
+    };
   //  if i ever got confused with below props rewatch vid No. 58
     props.onSaveExpenseData(expenseData)
     // console.log(expenseData)

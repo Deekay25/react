@@ -4,6 +4,7 @@ import "./NewExpense.css";
 
 function NewExpense(props) {
   const [isEditing,setIsEditing] = React.useState(false);
+  
   const startEditingHandler = () => {
     setIsEditing(true);
   }
