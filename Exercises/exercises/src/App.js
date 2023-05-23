@@ -67,13 +67,29 @@
 // Exercise No.11 dynamic styling 
 // ##################################
 
+// import React from 'react';
+
+// import DynamicStyles from './components/DynamicStyles_Ex11';
+
+// function App(){
+//   return (
+//     <DynamicStyles />
+//   ); 
+// }
+
+// export default App;
+
+// ##################################
+// Exercise No.12 dynamic css classes 
+// ##################################
+
 import React from 'react';
 
-import DynamicStyles from './components/DynamicStyles_Ex11';
+import DynamicCSSClasses from './components/dynamicCSSClasses_Ex12';
 
 function App(){
   return (
-    <DynamicStyles />
+    <DynamicCSSClasses />
   ); 
 }
 
