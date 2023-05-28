@@ -56,3 +56,34 @@ setTimeout is NOT added as a dependency because it's a built-in API (built-into 
 --> we wait before taking  action maybe after the user finish typing thier username
 --> instaed listning to every character the user types
 --> that is when the user made a pause
+
+### useReducers()
+--> when your state becomes bigger and depends on mulitple state
+--> using useReducer is recommended
+--> it's more powerful than useState but it shoudn't be used all the time
+
+--> useReducer in action 
+--> const [state, dispatchFn] = useReducer(reducerFn, initialState, initFn);
+--> state -> state snapshot used in the component re render or re evaluation cycle
+--> dispatchFn -> a function that can be used to dispatch a new action, it triggers an update of the state
+--> reducerFn -> (prevState, action) => newState
+--> a function triggered automatically once an action is dispatched via the dispatch function 
+--> receives the latest state snapshot and return the new updated state
+--> initial state -> the initial state
+--> initfn -> a function set to the initial state programmatically
+
+
+### when to use useReducer vs when to use useState
+--> useState
+--> the main state management tool
+--> Great for independent pieces of data
+--> Great if state updates are easy and limited to a few kind of updates
+
+--> useReducer
+--> Great if you need more power
+--> if you related pieces of state/data
+--> helpful if you have complex state updates 
+
+
+### context API
+--> instead of passing data 
