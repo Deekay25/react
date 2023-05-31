@@ -85,5 +85,10 @@ setTimeout is NOT added as a dependency because it's a built-in API (built-into 
 --> helpful if you have complex state updates 
 
 
-### context API
---> instead of passing data 
+### context API (rewatch videos because currently i do not understand)
+--> instead of passing data through props which will pass through components that do not need it 
+--> we could use context API to achieve the same functionality
+
+### context API limitations
+--> not great for high performance changes
+--> use context  to replace long props chains
